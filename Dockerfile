@@ -9,7 +9,7 @@ RUN chmod 400 /root/.ssh/id_rsa
 ENV SITENAME=lamozarax-lms.daoapp.io
 ARG SITENAME=lamozarax-lms.daoapp.io
 
-RUN pip install -r /sites/$SITENAME/deploy_tools/requirements/staging.txt
+RUN pip install -r ./deploy/requirements.txt
 ENV DJANGO_SETTINGS_MODULE=config.settings_staging
 RUN locale-gen en_US en_US.UTF-8
 ENV LC_ALL="en_US.UTF-8"

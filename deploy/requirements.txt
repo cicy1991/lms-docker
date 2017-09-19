@@ -1,0 +1,8 @@
+django==1.11.1
+django-extensions
+django-markdownx
+django-crispy-forms
+django-datetime-widget
+djangorestframework
+gunicorn
+psycopg2

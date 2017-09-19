@@ -1,11 +1,10 @@
 FROM daocloud.io/lamozarax/ubuntu-boostrap
 MAINTAINER lamozarax dev@xiaogu-tech.com
 
-# RUN mkdir -p /root/.ssh/
-# COPY ./deploy/config /root/.ssh/config
+RUN mkdir -p /root/.ssh/
 # COPY ./deploy/known_hosts/ /root/.ssh/known_hosts
-# COPY ./deploy/lms_deploy.key /root/.ssh/lms_deploy.key
-# RUN chmod 400 /root/.ssh/lms_deploy.key
+COPY ./deploy/id_rsa /root/.ssh/id_rsa
+RUN chmod 400 /root/.ssh/id_rsa
 
 # ENV SITENAME=xg-tech-lms.daoapp.io
 # ARG SITENAME=xg-tech-lms.daoapp.io

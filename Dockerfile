@@ -6,8 +6,8 @@ RUN mkdir -p /root/.ssh/
 COPY ./deploy/id_rsa /root/.ssh/id_rsa
 RUN chmod 400 /root/.ssh/id_rsa
 
-ENV SITENAME=lamozarax-lms.daoapp.io
-ARG SITENAME=lamozarax-lms.daoapp.io
+ENV SITENAME=xiaogu-lms.daoapp.io
+ARG SITENAME=xiaogu-lms.daoapp.io
 
 COPY ./deploy/requirements.txt /root/requirements.txt
 RUN pip install -r /root/requirements.txt

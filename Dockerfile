@@ -33,7 +33,7 @@ RUN sh /sites/$SITENAME/misc/cleanup.sh
 WORKDIR /sites/$SITENAME/
 
 WORKDIR source
-gunicorn --bind unix:/tmp/$SITENAME.socket config.wsgi:application
+RUN gunicorn --bind unix:/tmp/$SITENAME.socket config.wsgi:application
 
 # nginx related
 COPY ./deploy/nginx.conf /etc/nginx/sites-available/lms.conf

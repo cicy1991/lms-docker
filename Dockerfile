@@ -27,14 +27,14 @@ RUN    /etc/init.d/postgresql start &&\
 
 RUN echo "listen_addresses='*'" >> /etc/postgresql/9.5/main/postgresql.conf
 USER root
-RUN sh /sites/$SITENAME/misc/cleanup.sh
+# RUN sh /sites/$SITENAME/misc/cleanup.sh
 # DB related end
 
 
 WORKDIR /sites/$SITENAME/
 
 WORKDIR source
-RUN gunicorn --bind unix:/tmp/$SITENAME.socket config.wsgi:application
+# RUN gunicorn --bind unix:/tmp/$SITENAME.socket config.wsgi:application
 
 # nginx related
 COPY ./deploy/nginx.conf /etc/nginx/sites-available/lms.conf

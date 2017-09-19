@@ -42,7 +42,7 @@ RUN mv /etc/nginx/sites-available/lms.conf /etc/nginx/sites-available/$SITENAME
 RUN sed -i "s/SITENAME/$SITENAME/g" /etc/nginx/sites-available/$SITENAME
 RUN ln -s /etc/nginx/sites-available/$SITENAME /etc/nginx/sites-enabled/$SITENAME
 RUN rm /etc/nginx/sites-enabled/default
-RUN python manage.py collectstatic --noinput
+# RUN python manage.py collectstatic --noinput
 # nginx related end
 
 # USER postgres
